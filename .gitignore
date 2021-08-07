@@ -1,0 +1,9 @@
+nvp-client/.DS_Store
+node_modules/
+nvp-client/node_modules/
+nvp-client/dist/
+
+.env.local
+.env.*.local
+nvp-client/.env.local
+nvp-client/.env.*.local
