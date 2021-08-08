@@ -1,11 +1,11 @@
 <template>
   <div id="nav">
     <div class="left">
-      <router-link v-if="user" to="/">Home</router-link>
-      <router-link v-if="user" to="/about">About</router-link>
+      <router-link v-if="!user" to="/">Home</router-link>
+      <router-link v-if="!user" to="/about">About</router-link>
     </div>
     <div class="right">
-      <router-link v-if="!user" to="/login">
+      <router-link v-if="!!user" to="/login">
         <div class="login">
           
             Login
@@ -21,13 +21,18 @@
 export default {
   name: "App",
   data() {
-    user: {
+    return {
+      user: {}
     }
   },
-  mounted() {
-    user: null;
+  mounted () {
+    console.log(!this.user)
+
+    console.log(!!(this.user))
   },
 };
+
+
 </script>
 
 <style>

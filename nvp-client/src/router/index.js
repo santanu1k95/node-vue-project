@@ -5,7 +5,6 @@ import Home from '../views/Home.vue'
 const routes = [
   {
     path: '/',
-    name: 'Home',
     get component() {
       return (false ? Home : Greeting)
 
