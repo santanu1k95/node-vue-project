@@ -120,6 +120,14 @@ export default {
   &.active {
     background-color: var(--mainColor);
     color: white;
+    a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  a.router-link-exact-active {
+    color: #42b983;
+  }
     .hamburger {
       span {
         &:first-child {

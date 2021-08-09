@@ -1,24 +1,43 @@
 <template>
-  <div className="menu" id="menu">
+  <div :class="['menu', getMenuOpen ? 'active' : '']" id="menu">
     <ul>
       <li>
-        <a href="#intro">Home</a>
+        <a href="#intro" @click="togMenuOpen">Home</a>
       </li>
       <li>
-        <a href="#portfolio">Portfolio</a>
+        <a href="#portfolio" @click="togMenuOpen">Portfolio</a>
       </li>
       <li>
-        <a href="#works">Works</a>
+        <a href="#works" @click="togMenuOpen">Works</a>
       </li>
       <li>
-        <a href="#testimonials">Testimonials</a>
+        <a href="#testimonials" @click="togMenuOpen">Testimonials</a>
       </li>
       <li>
-        <a href="#contact">Contact</a>
+        <a href="#contact" @click="togMenuOpen">Contact</a>
       </li>
     </ul>
   </div>
 </template>
+
+<script>
+import { mapActions, mapGetters } from "vuex";
+
+export default {
+  data() {
+    return {
+    }
+  },
+  methods: {
+    ...mapActions({togMenuOpen:'togMenuOpen'})
+  },
+  computed: {
+    ...mapGetters({
+      getMenuOpen: "getMenuOpen",
+    }),
+  },
+}
+</script>
 
 <style scoped lang="scss">
 @import "../global.css";
