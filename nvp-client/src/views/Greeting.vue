@@ -1,6 +1,5 @@
 <template>
   <div class="about">
-    <h1>Greeting</h1>
     <Greeting/>
   </div>
 </template>

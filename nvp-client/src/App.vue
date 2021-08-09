@@ -1,86 +1,41 @@
 <template>
-  <div id="nav">
-    <div class="left">
-      <router-link v-if="!user" to="/">Home</router-link>
-      <router-link v-if="!user" to="/about">About</router-link>
-    </div>
-    <div class="right">
-      <router-link v-if="!!user" to="/login">
-        <div class="login">
-          
-            Login
-          
-        </div>
-      </router-link>
-    </div>
-  </div>
+  <topbar/>
   <router-view />
 </template>
 
 <script>
+import Topbar from './components/Topbar.vue';
+
+
 export default {
+  components: { Topbar },
   name: "App",
   data() {
     return {
-      user: {}
-    }
+      user: {},
+    };
   },
-  mounted () {
-    console.log(!this.user)
+  mounted() {
+    console.log(!this.user);
 
-    console.log(!!(this.user))
+    console.log(!!this.user);
   },
+  components:{
+    Topbar
+  }
 };
-
-
 </script>
 
-<style>
+<style lang="scss">
+@import "./global.css";
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  margin: 0;
+    padding: 0;
 }
 
-#nav {
-  display: flex;
-  justify-content: space-evenly;
-}
-.left {
-  display: flex;
-  justify-content: flex-start;
-  flex-basis: 70%;
-  gap: 12px;
-}
-
-.right {
-  display: flex;
-}
-
-.right a{
-  text-decoration: none;
-  color: white !important;
-}
-.right .login{
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid rgb(58, 156, 58);
-  width: 100px;
-  height: 20px;
-  border-radius: 5px;
-  background-color: rgb(12, 226, 94);
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
