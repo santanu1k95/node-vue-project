@@ -1,27 +1,24 @@
 <template>
-  <topbar/>
-  <router-view />
+  <div>
+    <Topbar/>
+    <Menu/>
+    <RouterView/>
+  </div>
+  
 </template>
 
 <script>
 import Topbar from './components/Topbar.vue';
-
+import RouterView from './components/RouterView.vue'
+import Menu from './components/Menu.vue'
+import {mapActions} from 'vuex';
 
 export default {
+  
   components: { Topbar },
   name: "App",
-  data() {
-    return {
-      user: {},
-    };
-  },
-  mounted() {
-    console.log(!this.user);
-
-    console.log(!!this.user);
-  },
   components:{
-    Topbar
+    Topbar,RouterView,Menu
   }
 };
 </script>

@@ -16,6 +16,7 @@ import Portfolio from "./Portfolio.vue";
 import Works from "./Works.vue";
 import Testimonials from "./Testimonials.vue";
 import Contact from "./Contact.vue";
+import { mapActions } from "vuex";
 
 export default {
   components: {

@@ -1,15 +1,15 @@
 <template>
   <div class="about">
-    <Greeting/>
+    <Greeting />
   </div>
 </template>
 
 <script>
-import Greeting from '../components/Greeting.vue'
-
+import Greeting from "../components/Greeting.vue";
+import { mapActions } from "vuex";
 export default {
-    components: {
-        Greeting,
-    },
-}
+  components: {
+    Greeting,
+  },
+};
 </script>
