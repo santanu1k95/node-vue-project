@@ -40,7 +40,7 @@ export default {
 .sections {
   width: 100%;
   height: calc(100vh - 70px);
-  background-color: rgb(212, 180, 167);
+  background-color: rgb(255, 255, 255);
   position: relative;
   top: 70px;
   scroll-behavior: smooth;
