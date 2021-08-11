@@ -41,6 +41,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "../global.css";
 .intro {
   display: flex;
   background-color: rgb(255, 255, 255);
@@ -57,7 +58,7 @@ export default {
       top: 50px;
       width: 1000px;
       height: 1100px;
-      background-color: crimson;
+      background-color: var(--mainColor);
       border-radius: 50%;
       display: flex;
       align-items: flex-end;
