@@ -4,8 +4,6 @@
       <Intro />
       <Portfolio />
       <Works />
-      <Testimonials />
-      <Contact />
     </div>
   </div>
 </template>
@@ -21,8 +19,6 @@ export default {
     Intro,
     Portfolio,
     Works,
-    Testimonials,
-    Contact,
   },
 };
 </script>
